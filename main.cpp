@@ -1,6 +1,27 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
+
+struct Lapor{
+    int id;
+    int kategori;
+    string namaBarang;
+    string deskripsi;
+    string lokasi;
+    string tanggal;
+    string namaPelapor;
+
+};
+
+Lapor laporan[10];
+
+int jumlahLaporan = 0;
+int noid = 1;
+
+
+
+
+
 
 int main() {
 

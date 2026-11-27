@@ -6,6 +6,7 @@ struct Laporan {
     int id;
     int jenis;
     int kategori;
+    string kontak;
     string namaBarang;
     string lokasi;
     string tanggal;
@@ -45,8 +46,7 @@ int inputRentang(string pesan, int min, int max) {
     do {
         angka = inputAngka(pesan);
         if (angka < min || angka > max) {
-            cout << "Pilihan harus antara "
-                 << min << " sampai " << max << "!\n";
+            cout << "Pilihan harus antara " << min << " sampai " << max << "!\n";
         }
     } while (angka < min || angka > max);
     system("cls");
@@ -148,7 +148,7 @@ void tampilSatuLaporan(int i) {
 }
 
 void tambahLaporan() {
-
+    system("cls");
     if (jumlahLaporan >= 100) {
         cout << "\nKapasitas laporan sudah penuh!\n";
         return;
@@ -159,7 +159,6 @@ void tambahLaporan() {
     cout << "====================================\n";
     cout << "1. Barang Hilang\n";
     cout << "2. Barang Temuan\n";
-
     laporan[jumlahLaporan].jenis = inputRentang("Pilih jenis laporan: ", 1, 2);
 
     cout << "\nPILIH KATEGORI BARANG\n";
@@ -169,47 +168,42 @@ void tambahLaporan() {
     cout << "4. Pakaian\n";
     cout << "5. Kunci\n";
     cout << "6. Lainnya\n";
-
     laporan[jumlahLaporan].kategori = inputRentang("Pilih kategori: ", 1, 6);
+
+    cout << "\tMASUKKAN DETAIL LAPORAN\n\n";
     laporan[jumlahLaporan].id = nomorID;
     laporan[jumlahLaporan].namaBarang = inputTeks("Nama Barang  : ");
     laporan[jumlahLaporan].lokasi = inputTeks("Lokasi       : ");
     laporan[jumlahLaporan].tanggal = inputTeks("Tanggal      : ");
     laporan[jumlahLaporan].deskripsi = inputTeks("Deskripsi    : ");
     laporan[jumlahLaporan].namaPelapor = inputTeks("Nama Pelapor : ");
+    laporan[jumlahLaporan].kontak = inputTeks("Kontak       : ");
     laporan[jumlahLaporan].status = 1;
     cout << "\nLaporan berhasil ditambahkan!\n";
     cout << "ID Laporan: " << nomorID << endl;
 
     jumlahLaporan++;
     nomorID++;
+    cin.get();
 }
 
-void tampilLaporan() {
-
-    cout << "\n====================================\n";
-    cout << "          DAFTAR LAPORAN\n";
-    cout << "====================================\n";
-
+void tampilkanLaporan() {
+    system("cls");
     if (jumlahLaporan == 0) {
         cout << "Belum ada laporan.\n";
         return;
     }
 
     for (int i = 0; i < jumlahLaporan; i++) {
-        cout << "\nID            : " << laporan[i].id;
-        cout << "\nJenis         : " << jenisLaporan(laporan[i].jenis);
-        cout << "\nKategori      : " << kategoriBarang(laporan[i].kategori);
-        cout << "\nNama Barang   : " << laporan[i].namaBarang;
-        cout << "\nLokasi        : " << laporan[i].lokasi;
-        cout << "\nTanggal       : " << laporan[i].tanggal;
-        cout << "\nNama Pelapor  : " << laporan[i].namaPelapor;
-        cout << "\nStatus        : " << statusLaporan(laporan[i].jenis,laporan[i].status);
-        cout << "\n------------------------------------\n";
+        tampilSatuLaporan(i);
     }
+
+    cout << "Total laporan: " << jumlahLaporan << endl;
+    cin.get();
 }
 
 void cariLaporan() {
+    system("cls");
 
     if (jumlahLaporan == 0) {
         cout << "\nBelum ada laporan untuk dicari.\n";
@@ -217,28 +211,14 @@ void cariLaporan() {
     }
 
     cout << "\n========== CARI LAPORAN ==========\n";
-    cout << "1. Cari berdasarkan ID\n";
-    cout << "2. Cari berdasarkan nama barang\n";
-    cout << "3. Cari berdasarkan kategori\n";
+    cout << "1. Cari berdasarkan nama barang\n";
+    cout << "2. Cari berdasarkan kategori\n";
 
     int pilihan = inputRentang(
-        "Pilih pencarian: ", 1, 3
+        "Pilih pencarian: ", 1, 2
     );
 
     if (pilihan == 1) {
-
-        int id = inputAngka("Masukkan ID laporan: ");
-        int index = cariID(id);
-
-        if (index == -1) {
-            cout << "\nLaporan tidak ditemukan!\n";
-        }
-        else {
-            tampilSatuLaporan(index);
-        }
-    }
-
-    else if (pilihan == 2) {
 
         string nama = inputTeks(
             "Masukkan nama barang: "
@@ -256,9 +236,7 @@ void cariLaporan() {
         if (!ditemukan) {
             cout << "\nBarang tidak ditemukan!\n";
         }
-    }
-
-    else {
+    }else {
 
         cout << "\nPILIH KATEGORI BARANG\n";
         cout << "1. Elektronik\n";
@@ -285,10 +263,12 @@ void cariLaporan() {
             cout << "\nTidak ada laporan pada kategori tersebut!\n";
         }
     }
+    cin.get();
 }
 
 void updateStatus() {
 
+    system("cls");
     if (jumlahLaporan == 0) {
         cout << "\nBelum ada laporan.\n";
         return;
@@ -328,9 +308,12 @@ void updateStatus() {
 
     cout << "\nStatus berhasil diperbarui!\n";
     cout << "Status sekarang: " << statusLaporan(laporan[index].jenis, laporan[index].status) << endl;
+
+    cin.get();
 }
 
 void hapusLaporan() {
+    system("cls");
     if (jumlahLaporan == 0) {
         cout << "\nBelum ada laporan untuk dihapus.\n";
         return;
@@ -368,6 +351,7 @@ void hapusLaporan() {
     else {
         cout << "\nPenghapusan dibatalkan.\n";
     }
+    cin.get();
 }
 
 int main() {
@@ -375,6 +359,7 @@ int main() {
     int pilihan;
 
     do {
+        system("cls");
 
         cout << "\n====================================\n";
         cout << "       CAMPUS LOST AND FOUND\n";
@@ -399,7 +384,7 @@ int main() {
                 tambahLaporan();
                 break;
             case 2:
-                tampilLaporan();
+                tampilkanLaporan();
                 break;
             case 3:
                 cariLaporan();

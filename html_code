@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TemuKembali – Pusat barang hilang &amp; temuan</title>
+<meta name="description" content="TemuKembali adalah pusat laporan barang hilang dan barang temuan. Laporkan kehilangan, cari barangmu, dan bantu barang kembali ke pemiliknya.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://GANTI-DENGAN-DOMAINMU/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TemuKembali – Pusat barang hilang &amp; temuan">
+<meta property="og:description" content="Laporkan barang hilang atau temuan dan bantu barang kembali ke pemiliknya.">
+<meta property="og:url" content="https://GANTI-DENGAN-DOMAINMU/">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f6e5c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🔎%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"TemuKembali","url":"https://GANTI-DENGAN-DOMAINMU/","inLanguage":"id","description":"Pusat laporan barang hilang dan barang temuan."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7f8;--card:#fff;--ink:#14282b;--mut:#6b7c80;--line:#e1e7e9;--pri:#0f6e5c;--pri-t:#fff;--mint:#e5f2ed;--red:#b4532a;--redbg:#fbe9e3;--amb:#8a5a12;--ambbg:#fdeed6;--blu:#3b4f9a;--blubg:#e8edfb;--side:#f5f7f8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1618;--card:#172124;--ink:#e8f0f0;--mut:#93a5a8;--line:#273337;--pri:#2aa58b;--pri-t:#06201b;--mint:#17302b;--red:#f0946d;--redbg:#3a2219;--amb:#f0c070;--ambbg:#3a2e14;--blu:#9db0f5;--blubg:#1e2744;--side:#0f1618;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1618;--card:#172124;--ink:#e8f0f0;--mut:#93a5a8;--line:#273337;--pri:#2aa58b;--pri-t:#06201b;--mint:#17302b;--red:#f0946d;--redbg:#3a2219;--amb:#f0c070;--ambbg:#3a2e14;--blu:#9db0f5;--blubg:#1e2744;--side:#0f1618;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+.app{display:grid;grid-template-columns:200px 1fr;min-height:100vh}
+aside{background:var(--side);border-right:1px solid var(--line);padding:24px 14px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.logo{font-size:24px;font-weight:700;color:var(--pri);letter-spacing:-.5px;padding:0 6px}
+.tag{font-size:11px;color:var(--mut);padding:0 6px;margin-top:2px}
+.sec{font-size:11px;font-weight:600;color:var(--mut);letter-spacing:.05em;text-transform:uppercase;margin:34px 6px 8px}
+nav a{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:10px;color:var(--mut);font-weight:500;font-size:14.5px;margin-bottom:2px}
+nav a:hover{background:var(--mint)}
+nav a.on{background:var(--mint);color:var(--pri);font-weight:600}
+.cnt{font-size:12px;font-weight:600;padding:1px 7px;border-radius:6px}
+nav a.on .cnt{background:#d2e9e0;background:color-mix(in srgb,var(--pri) 15%,transparent)}
+hr{border:0;border-top:1px solid var(--line);margin:16px 6px}
+.help{margin-top:auto;background:var(--mint);border-radius:14px;padding:16px}
+.help b{display:block;font-size:14px}.help p{margin:6px 0 14px;font-size:12px;color:var(--mut)}
+.help a,.lnk{color:var(--pri);font-weight:600;font-size:13px;cursor:pointer;background:none;border:0;padding:0}
+.copy{font-size:12px;color:var(--mut);padding:14px 6px 0}
+header{background:var(--card);display:flex;align-items:center;justify-content:space-between;padding:14px 32px;border-bottom:1px solid var(--line);gap:12px}
+.crumb{color:var(--mut)}.crumb b{color:var(--ink);font-weight:500}.crumb i{margin:0 12px;font-style:normal}
+.hr{display:flex;align-items:center;gap:20px;font-size:12.5px;color:var(--mut)}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:9px 16px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--pri)}
+.btn.p{background:var(--pri);color:var(--pri-t);border-color:var(--pri)}.btn.p:hover{filter:brightness(1.1)}
+.btn.sm{padding:6px 14px;font-weight:500;font-size:13px}
+main{padding:30px 32px 40px;max-width:1100px;width:100%}
+h1{font-size:28px;margin:0;letter-spacing:-.5px;font-weight:600}
+.sub{color:var(--mut);margin:6px 0 0}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.back{display:inline-block;color:var(--pri);font-size:13px;font-weight:500;margin-bottom:14px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+h2{font-size:18px;margin:0 0 6px;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.stat{padding:16px 18px}.stat small{color:var(--mut);font-size:13px}
+.stat div{display:flex;align-items:baseline;gap:12px;margin-top:6px}.stat strong{font-size:32px;font-weight:600;line-height:1.1}.stat span{font-size:11.5px;color:var(--mut)}
+.banner{background:var(--mint);color:var(--pri);border-radius:12px;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.banner b{display:block;font-size:15px}.banner span{font-size:13px}
+.banner.big{padding:20px 22px}.banner .n{font-size:38px;font-weight:600;margin-right:22px}
+.red{color:var(--red)}.grn{color:var(--pri)}
+.bar{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.bar input,.bar select,.fld input,.fld select,.fld textarea{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:10px 14px;outline:0;width:100%}
+.bar input:focus,.bar select:focus,.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--pri);box-shadow:0 0 0 3px color-mix(in srgb,var(--pri) 18%,transparent)}
+.bar .s{flex:1;min-width:200px}.bar select{width:auto;min-width:150px}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);align-items:center}
+.tabs button{background:none;border:0;padding:10px 0;color:var(--mut);font-weight:500;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button.on{color:var(--pri);border-color:var(--pri);font-weight:600}
+.tabs span{margin-left:auto;font-size:12px;color:var(--mut)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{text-align:left;font-size:11px;letter-spacing:.04em;color:var(--mut);padding:10px 12px;background:var(--bg);font-weight:600;text-transform:uppercase}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg) 55%,transparent)}
+td b{display:block;font-weight:500}td small{color:var(--mut);font-size:12px}
+.j{font-size:11px;font-weight:700;letter-spacing:.03em}
+.badge{display:inline-block;font-size:12px;padding:3px 14px;border-radius:6px;white-space:nowrap}
+.s0{background:var(--ambbg);color:var(--amb)}.s1{background:var(--blubg);color:var(--blu)}.s2{background:var(--mint);color:var(--pri)}
+.pg{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--mut)}
+.pg div{display:flex;gap:8px}
+.pg button{min-width:36px;height:36px;border:1px solid var(--line);background:var(--card);border-radius:8px;cursor:pointer;padding:0 14px}
+.pg button.on{background:var(--pri);color:var(--pri-t);border-color:var(--pri)}.pg button:disabled{opacity:.4;cursor:default}
+.pg .num{border-color:transparent;background:none}.pg .num.on{border-color:var(--pri);background:var(--pri)}
+.foot{display:flex;justify-content:space-between;color:var(--mut);font-size:12px;margin-top:22px;gap:12px;flex-wrap:wrap}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rc{padding:18px 20px}
+.rc .h{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.rc .h b{font-size:16px;font-weight:600}.rc .h small{display:block;color:var(--mut);margin-top:2px}
+.rc dl{margin:14px 0;display:grid;grid-template-columns:110px 1fr;gap:8px 0;font-size:13px}.rc dt{color:var(--mut)}.rc dd{margin:0}
+.rc .f{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:10px;font-size:12px;color:var(--mut)}
+.cols{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+.cols>div{display:grid;gap:20px}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:20px 24px;border-top:1px solid var(--line);margin-top:16px;padding-top:20px}
+.kv small{display:block;color:var(--mut);font-size:13px}.kv b{font-weight:500;font-size:15px}
+.desc{border-top:1px solid var(--line);margin-top:20px;padding-top:18px}.desc b{display:block;margin-bottom:8px}.desc p{margin:0 0 14px}.desc .m{color:var(--mut)}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:3px 16px;border-radius:6px}
+.hl{background:var(--redbg);color:var(--red)}.tm{background:var(--mint);color:var(--pri)}
+.row{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-top:14px}
+.row small{color:var(--mut);font-size:13px;display:block}
+.hist{display:flex;gap:16px;margin-top:16px;color:var(--pri);font-weight:600;font-size:13px}.hist b{color:var(--ink);font-weight:500;font-size:14px;display:block}.hist small{color:var(--mut);font-weight:400}
+.fld{margin-top:18px}.fld label{display:block;font-weight:500;font-size:13px;margin-bottom:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.types{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.type{text-align:left;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:12px 14px;cursor:pointer}
+.type b{display:flex;justify-content:space-between;font-weight:600}.type b i{font-style:normal;font-size:11px;color:var(--pri)}.type small{color:var(--mut)}
+.type.on{background:var(--mint);border-color:var(--pri)}.type.on b{color:var(--pri)}.type:not(.on) b i{display:none}
+.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);margin:24px -22px -22px;padding:18px 22px;flex-wrap:wrap}
+.actions small{color:var(--mut)}.actions div{display:flex;gap:12px}
+.err{color:var(--red);font-size:12px;margin-top:4px;display:none}.bad+.err{display:block}.bad{border-color:var(--red)!important}
+.tips div{display:flex;gap:14px;margin-top:16px}.tips i{font-style:normal;color:var(--pri);font-weight:600;font-size:13px}.tips b{display:block;font-weight:600}.tips small{color:var(--mut)}
+.mint{background:var(--mint);border:0;color:var(--pri)}.mint h2{color:var(--pri)}.mint p{margin:8px 0 0;font-size:13.5px}
+.step{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}.step:last-child{border:0}
+.step i{font-style:normal;background:var(--mint);color:var(--pri);font-weight:600;border-radius:8px;width:40px;height:32px;flex:none;display:grid;place-items:center;font-size:13px}
+.step b{font-weight:600}.step p{margin:4px 0 0;color:var(--mut)}
+.tip{margin-top:18px}.tip b{color:var(--pri);font-size:13.5px;display:block;font-weight:600}.tip p{margin:2px 0 0;color:var(--mut);font-size:13px}
+.faq{border-bottom:1px solid var(--line)}.faq:last-child{border:0}
+.faq button{display:flex;justify-content:space-between;width:100%;background:none;border:0;padding:14px 0;font-weight:600;cursor:pointer;text-align:left}.faq p{margin:0 0 14px;color:var(--mut);display:none}.faq.open p{display:block}
+.cat{padding:20px;cursor:pointer;text-align:left}.cat:hover{border-color:var(--pri)}.cat strong{font-size:30px;font-weight:600;display:block}.cat span{color:var(--mut)}
+.empty{text-align:center;color:var(--mut);padding:40px 0}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--pri);color:var(--pri-t);padding:10px 20px;border-radius:10px;font-weight:600;box-shadow:0 6px 20px #0003;z-index:20}
+@media (max-width:980px){.cols{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.hr .t{display:none}}
+@media (max-width:760px){
+.app{grid-template-columns:1fr}
+aside{position:static;height:auto;flex-direction:row;flex-wrap:wrap;padding:12px;gap:8px;align-items:center;border-right:0;border-bottom:1px solid var(--line)}
+aside .tag,aside .sec,aside hr,.help,.copy{display:none}
+.logo{flex:0 0 100%}
+nav{display:flex;gap:6px;overflow-x:auto;max-width:100%}nav a{white-space:nowrap;gap:8px}
+header{padding:12px 16px}main{padding:22px 16px 32px}
+.grid2,.two,.types,.kv{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}h1{font-size:24px}.hr .t{display:none}.card{padding:18px}.actions{margin:20px -18px -18px;padding:16px 18px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside>
+ <div><div class="logo">temukembali.</div><div class="tag">Barang hilang, harapan kembali.</div></div>
+ <div class="sec">Ruang kerja</div>
+ <nav id="nav1"></nav>
+ <hr><div class="sec" style="margin-top:0">Bantuan</div>
+ <nav id="nav2"></nav>
+ <div class="help"><b>Kehilangan sesuatu?</b><p>Mulai dari satu laporan.<br>Kami bantu mempertemukan.</p><a href="#panduan">Lihat panduan →</a></div>
+ <div class="copy">TemuKembali • 2025</div>
+</aside>
+<div>
+ <header><div class="crumb" id="crumb"></div><div class="hr"><span class="t">Pusat barang hilang &amp; temuan</span><a class="btn" href="#panduan">Panduan</a></div></header>
+ <main id="view"><noscript><h1>TemuKembali – Pusat barang hilang &amp; temuan</h1><p>Laporkan barang hilang atau temuan dan bantu barang kembali ke pemiliknya. Aktifkan JavaScript untuk menggunakan situs ini.</p></noscript></main>
+</div>
+</div>
+<script>
+var CATS=["Tas & Dompet","Kunci","Elektronik","Dokumen & Kartu","Pakaian & Aksesoris","Lainnya"];
+var ST=["Belum Ditangani","Dalam Proses","Selesai"];
+var NAMES=["Nadia Putri","Raka Pratama","Sinta Dewi","Bagas Wicaksono","Laras Ayu","Dimas Saputra"];
+var D=[];
+(function(){
+ var big=[
+ [24,"Dompet kulit cokelat",0,"H","Perpustakaan pusat","2025-06-18",0],
+ [23,"Kunci motor Honda",1,"T","Parkiran gedung B","2025-06-18",1],
+ [22,"Headphone Sony hitam",2,"H","Kantin utama","2025-06-17",0],
+ [21,"Kartu tanda mahasiswa",3,"T","Lobi gedung A","2025-06-17",2],
+ [20,"Jaket denim biru",4,"T","Lapangan olahraga","2025-06-16",1],
+ [19,"Botol minum hijau",5,"H","Ruang kelas 203","2025-06-16",2],
+ [18,"Kacamata bingkai hitam",4,"H","Ruang diskusi 1","2025-06-15",1],
+ [17,"Kunci kos dan gantungan biru",1,"H","Area parkir timur","2025-06-14",0],
+ [16,"Kartu akses perpustakaan",3,"H","Gedung serbaguna","2025-06-13",2],
+ [15,"Payung lipat abu-abu",5,"T","Halte kampus","2025-06-15",0],
+ [14,"Tas ransel hitam",0,"T","Ruang seminar","2025-06-14",1],
+ [13,"Pengisi daya laptop",2,"T","Laboratorium komputer","2025-06-13",0],
+ [12,"Jam tangan hitam",4,"H","Masjid kampus","2025-06-12",1],
+ [11,"Flashdisk 64GB",2,"H","Ruang komputer","2025-06-11",2],
+ [10,"Buku catatan merah",5,"H","Aula utama","2025-06-10",0],
+ [9,"KTP atas nama Rina",3,"T","Pos satpam","2025-06-09",2],
+ [8,"Dompet kain batik",0,"H","Pasar kampus","2025-06-08",2],
+ [7,"Kunci loker 114",1,"T","Gedung olahraga","2025-06-07",2],
+ [6,"Earphone putih",2,"H","Taman fakultas","2025-06-06",1],
+ [5,"Topi hitam polos",4,"T","Kantin belakang","2025-06-05",0],
+ [4,"Kalkulator ilmiah",2,"H","Ruang ujian B","2025-06-04",0],
+ [3,"Mukena putih",4,"H","Musala fakultas","2025-06-03",2],
+ [2,"Tumbler abu-abu",5,"T","Ruang dosen","2025-06-02",2],
+ [1,"Kartu ATM biru",3,"H","Mesin ATM kampus","2025-06-01",0]];
+ big.forEach(function(r){D.push({id:r[0],name:r[1],cat:CATS[r[2]],type:r[3]=="H"?"hilang":"temuan",loc:r[4],date:r[5],status:r[6],by:NAMES[r[0]%6],contact:"0812"+(10000000+r[0]*7919).toString().slice(0,8),
+ desc:r[0]==24?"Dompet kulit berwarna cokelat tua dengan dua lipatan. Terdapat jahitan berwarna krem di bagian tepi dan goresan kecil pada sudut kanan bawah.":"Ciri umum: "+r[1].toLowerCase()+". Hubungi pelapor untuk mencocokkan ciri khusus.",
+ hist:[{t:"Laporan dibuat",d:r[5]}]});});
+})();
+var BL=["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+function fd(s){var p=s.split("-");return +p[2]+" "+BL[+p[1]-1]+" "+p[0]}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function pad(n){return String(n).padStart(3,"0")}
+function mask(c){return c.indexOf("@")>-1?c.replace(/^(.).*(@.*)$/,"$1•••$2"):c.slice(0,4)+" •••• ••"+c.slice(-2)}
+function badge(s){return '<span class="badge s'+s+'">'+ST[s]+'</span>'}
+var V=document.getElementById("view"),flt={q:"",cat:"",st:"",tab:"all",page:1,route:""},formType="hilang",editId=null;
+function toast(m){var t=document.createElement("div");t.className="toast";t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove()},2200)}
+function filtered(type){
+ var q=flt.q.toLowerCase();
+ return D.filter(function(d){
+  var ty=type||(flt.tab=="all"?"":flt.tab);
+  return(!ty||d.type==ty)&&(!flt.cat||d.cat==flt.cat)&&(flt.st===""||d.status==+flt.st)&&(!q||(d.name+" "+d.loc+" #"+pad(d.id)+" "+d.id).toLowerCase().indexOf(q)>-1)
+ }).sort(function(a,b){return b.id-a.id});
+}
+function opts(arr,all,sel){return '<option value="">'+all+'</option>'+arr.map(function(a,i){return '<option value="'+(all.indexOf("status")>-1?i:esc(a))+'"'+(String(sel)===String(all.indexOf("status")>-1?i:a)&&sel!==""?" selected":"")+'>'+esc(a)+'</option>'}).join("")}
+function filterBar(){return '<div class="bar"><input class="s" id="q" placeholder="Cari nama barang, lokasi, atau ID laporan..." value="'+esc(flt.q)+'"><button class="btn p" id="go">Cari</button><select id="fc">'+opts(CATS,"Semua kategori",flt.cat)+'</select><select id="fs">'+opts(ST,"Semua status",flt.st)+'</select>'}
+function bindBar(redraw){
+ var q=document.getElementById("q");
+ function apply(){flt.q=q.value;flt.page=1;redraw()}
+ document.getElementById("go").onclick=apply;
+ q.onkeydown=function(e){if(e.key=="Enter")apply()};
+ document.getElementById("fc").onchange=function(e){flt.cat=e.target.value;flt.page=1;redraw()};
+ document.getElementById("fs").onchange=function(e){flt.st=e.target.value;flt.page=1;redraw()};
+ var r=document.getElementById("rs");if(r)r.onclick=function(){flt.q="";flt.cat="";flt.st="";flt.page=1;redraw()};
+}
+function pager(total,per,rerender){
+ var pages=Math.max(1,Math.ceil(total/per)),p=Math.min(flt.page,pages),a=total?(p-1)*per+1:0,b=Math.min(total,p*per),h='<div class="pg"><span>Menampilkan '+a+"–"+b+" dari "+total+' laporan</span><div><button data-p="'+(p-1)+'"'+(p<2?" disabled":"")+'>Sebelumnya</button>';
+ for(var i=1;i<=pages;i++)h+='<button class="num'+(i==p?" on":"")+'" data-p="'+i+'">'+i+"</button>";
+ return h+'<button data-p="'+(p+1)+'"'+(p>=pages?" disabled":"")+'>→</button></div></div>';
+}
+function bindPager(redraw){document.querySelectorAll(".pg button").forEach(function(b){b.onclick=function(){flt.page=+b.dataset.p;redraw();window.scrollTo(0,0)}})}
+function count(t){return D.filter(function(d){return!t||d.type==t}).length}
+
+function pageAll(){
+ var all=count(),h=count("hilang"),t=count("temuan"),s=D.filter(function(d){return d.status==2}).length;
+ function draw(){
+  var list=filtered(),p=Math.min(flt.page,Math.max(1,Math.ceil(list.length/6))),rows=list.slice((p-1)*6,p*6);
+  document.getElementById("tbl").innerHTML=(rows.length?'<div class="tw"><table><thead><tr><th>Barang / Kategori</th><th>Jenis</th><th>Lokasi</th><th>Tanggal</th><th>Status</th><th style="text-align:center">Aksi</th></tr></thead><tbody>'+rows.map(function(d){return'<tr><td><b>'+esc(d.name)+'</b><small>'+esc(d.cat)+' · #'+pad(d.id)+'</small></td><td><span class="j '+(d.type=="hilang"?"red":"grn")+'">'+d.type.toUpperCase()+'</span></td><td>'+esc(d.loc)+'</td><td style="color:var(--mut)">'+fd(d.date)+'</td><td>'+badge(d.status)+'</td><td style="text-align:center"><a class="btn sm" href="#detail-'+d.id+'">Lihat detail</a></td></tr>'}).join("")+'</tbody></table></div>':'<div class="empty">Tidak ada laporan yang cocok.</div>')+pager(list.length,6);
+  bindPager(draw);
+  document.querySelectorAll(".tabs button").forEach(function(b){b.className=b.dataset.t==flt.tab?"on":"";var n=b.dataset.t=="all"?all:count(b.dataset.t);b.querySelector("em").textContent=count(b.dataset.t=="all"?"":b.dataset.t)});
+ }
+ V.innerHTML='<div class="top"><div><h1>Kelola laporan, temukan kembali.</h1><p class="sub">Satu tempat untuk menghubungkan barang hilang dengan pemiliknya.</p></div><a class="btn p" href="#tambah">+ &nbsp;Tambah laporan</a></div>'+
+ '<div class="stats"><div class="card stat"><small>Total laporan</small><div><strong>'+all+'</strong><span>Semua laporan tercatat</span></div></div><div class="card stat"><small>Barang hilang</small><div><strong class="red">'+h+'</strong><span>Bantu temukan pemiliknya</span></div></div><div class="card stat"><small>Barang temuan</small><div><strong class="grn">'+t+'</strong><span>Menunggu untuk kembali</span></div></div><div class="card stat"><small>Selesai</small><div><strong class="grn">'+pad(s).slice(1)+'</strong><span>Sudah kembali ke pemiliknya</span></div></div></div>'+
+ '<div class="banner"><div><b>Menemukan barang? Jadilah alasan seseorang tersenyum hari ini.</b><span>Laporkan detail barang dan lokasi penemuan agar lebih cepat kembali.</span></div><a class="lnk" href="#tambah-temuan">Buat laporan temuan →</a></div>'+
+ '<div class="card"><div class="top" style="margin:0"><h2 style="font-size:19px">Daftar laporan</h2><span class="sub" style="font-size:13px">Temukan barang berdasarkan nama, lokasi, atau ID laporan.</span></div>'+filterBar()+'<button class="btn" id="rs">Reset</button></div><div class="tabs"><button data-t="all">Semua laporan <em class="cnt" style="font-style:normal"></em></button><button data-t="hilang">Hilang <em style="font-style:normal"></em></button><button data-t="temuan">Temuan <em style="font-style:normal"></em></button><span>Terbaru lebih dulu</span></div><div id="tbl"></div></div>'+
+ '<div class="foot"><span>Jaga privasi. Informasi kontak pelapor hanya ditampilkan pada detail laporan.</span><span>Data contoh untuk pratinjau UI</span></div>';
+ document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){flt.tab=b.dataset.t;flt.page=1;draw()}});
+ bindBar(draw);draw();
+}
+
+function pageType(type){
+ var H=type=="hilang",lab=H?"Terakhir terlihat":"Ditemukan di";
+ function draw(){
+  var list=filtered(type),p=Math.min(flt.page,Math.max(1,Math.ceil(list.length/6))),rows=list.slice((p-1)*6,p*6);
+  document.getElementById("cards").innerHTML=(rows.length?'<div class="grid2">'+rows.map(function(d){return'<div class="card rc"><div class="h"><div><b>'+esc(d.name)+'</b><small>'+esc(d.cat)+'</small></div>'+badge(d.status)+'</div><dl><dt>'+lab+'</dt><dd>'+esc(d.loc)+'</dd><dt>Tanggal</dt><dd>'+fd(d.date)+'</dd></dl><div class="f"><span>Laporan #'+pad(d.id)+'</span><a class="lnk" href="#detail-'+d.id+'">Lihat detail →</a></div></div>'}).join("")+'</div>':'<div class="card empty">Tidak ada laporan yang cocok.</div>')+pager(list.length,6);
+  document.getElementById("info").textContent="Menampilkan "+rows.length+" dari "+list.length+" laporan · Terbaru lebih dulu";
+  bindPager(draw);
+ }
+ V.innerHTML='<div class="top"><div><h1>'+(H?"Barang hilang":"Barang temuan")+'</h1><p class="sub">'+(H?"Bantu temukan barang yang sedang dicari pemiliknya.":"Mungkin barang yang kamu cari sudah ditemukan di sini.")+'</p></div><a class="btn p" href="#tambah'+(H?"":"-temuan")+'">+ &nbsp;'+(H?"Laporkan kehilangan":"Laporkan temuan")+'</a></div>'+
+ '<div class="banner big"><div style="display:flex;align-items:center"><span class="n">'+count(type)+'</span><div><b>Laporan barang '+type+'</b><span>'+(H?"Kenali cirinya, lihat lokasinya, lalu bantu hubungkan kembali.":"Cocokkan ciri barang sebelum menghubungi pelapor.")+'</span></div></div><div><span>'+(H?"Menemukan barang?":"Belum menemukan barangmu?")+'</span><a class="lnk" style="display:block" href="#tambah'+(H?"-temuan":"")+'">'+(H?"Buat laporan temuan →":"Buat laporan kehilangan →")+'</a></div></div>'+
+ '<div class="card" style="padding:16px 18px;margin-bottom:16px">'+filterBar()+'</div><div class="row" style="margin:0"><small id="info"></small><button class="lnk" id="rs">Reset filter</button></div></div><div id="cards"></div>'+
+ '<div class="foot"><span>Jaga privasi. Cocokkan informasi barang melalui detail laporan.</span><span>Data contoh untuk pratinjau UI</span></div>';
+ var bar=V.querySelector(".bar");bar.parentNode.style.marginBottom="0";bar.style.margin="0 0 10px";
+ bindBar(draw);draw();
+}
+
+function pageDetail(id){
+ var d=D.filter(function(x){return x.id==id})[0];
+ if(!d){V.innerHTML='<a class="back" href="#semua">← Kembali ke semua laporan</a><div class="card empty">Laporan tidak ditemukan.</div>';return}
+ V.innerHTML='<a class="back" href="#semua">← &nbsp;Kembali ke semua laporan</a><div class="top"><div><h1>'+esc(d.name)+'</h1><p class="sub">Laporan #'+pad(d.id)+' · Dibuat pada '+fd(d.date)+'</p></div><a class="btn" href="#edit-'+d.id+'">Edit laporan</a></div>'+
+ '<div class="cols"><div><div class="card"><div style="display:flex;justify-content:space-between"><h2>Informasi barang</h2><span class="chip '+(d.type=="hilang"?"hl":"tm")+'">'+d.type.toUpperCase()+'</span></div><div class="kv"><div><small>Kategori</small><b>'+esc(d.cat)+'</b></div><div><small>Tanggal '+(d.type=="hilang"?"kehilangan":"penemuan")+'</small><b>'+fd(d.date)+'</b></div><div><small>Lokasi '+(d.type=="hilang"?"terakhir":"penemuan")+'</small><b>'+esc(d.loc)+'</b></div><div><small>ID laporan</small><b>#'+pad(d.id)+'</b></div></div><div class="desc"><b>Deskripsi barang</b><p>'+esc(d.desc)+'</p><p class="m">'+(d.type=="hilang"?"Jika menemukan barang dengan ciri serupa, silakan hubungi pelapor.":"Cocokkan ciri khusus bersama pemilik sebelum menyerahkan barang.")+'</p></div></div>'+
+ '<div class="card"><h2>Informasi pelapor</h2><small style="color:var(--mut)">Gunakan kontak ini hanya untuk keperluan pengembalian barang.</small><div class="row" style="align-items:center;margin-top:20px"><div style="display:flex;gap:70px;flex-wrap:wrap"><div><small>Nama pelapor</small><b style="font-weight:500;font-size:15px">'+esc(d.by)+'</b></div><div><small>Kontak</small><b style="font-weight:500;font-size:15px">'+esc(mask(d.contact))+'</b></div></div><button class="btn p" id="ct" style="padding:12px 30px">Hubungi pelapor</button></div><small style="margin-top:20px;color:var(--mut)">Data contoh • Kontak disamarkan untuk pratinjau desain.</small></div></div>'+
+ '<div><div class="card"><h2>Status penanganan</h2><div style="margin:12px 0 14px" id="cur">'+badge(d.status)+'</div><p style="color:var(--mut);margin:0 0 18px;font-size:13.5px">'+["Laporan tercatat dan menunggu tindak lanjut.","Pencarian, pencocokan, atau konfirmasi sedang berlangsung.","Barang sudah kembali dan penanganan laporan selesai."][d.status]+'</p><div class="fld" style="margin:0 0 14px"><label>Ubah status</label><select id="ss">'+ST.map(function(s,i){return'<option value="'+i+'"'+(i==d.status?" selected":"")+'>'+s+'</option>'}).join("")+'</select></div><button class="btn p" id="sv" style="width:100%;padding:13px">Simpan status</button></div>'+
+ '<div class="card"><h2>Riwayat laporan</h2>'+d.hist.map(function(h,i){return'<div class="hist"><span>'+pad(i+1).slice(1)+'</span><div><b>'+esc(h.t)+'</b><small>'+fd(h.d)+(i==0?" • "+esc(d.by):"")+'</small></div></div>'}).join("")+(d.hist.length<2?'<hr style="margin:16px 0"><small style="color:var(--mut);font-size:14px">Belum ada pembaruan status.</small>':"")+'</div></div></div>'+
+ '<div class="card mint" style="margin-top:20px;padding:18px 22px"><b style="font-weight:600">Pastikan barang kembali ke orang yang tepat.</b><p>Cocokkan ciri khusus bersama pemilik sebelum menyerahkan barang. Jangan membagikan data pribadi secara terbuka.</p></div><div class="foot"><span>Data contoh untuk pratinjau UI</span></div>';
+ document.getElementById("ct").onclick=function(){toast("Kontak disamarkan pada pratinjau ini")};
+ document.getElementById("sv").onclick=function(){
+  var n=+document.getElementById("ss").value;if(n==d.status){toast("Status tidak berubah");return}
+  d.status=n;d.hist.push({t:"Status diubah menjadi "+ST[n],d:new Date().toISOString().slice(0,10)});toast("Status disimpan");pageDetail(id);
+ };
+}
+
+function pageForm(type,edit){
+ var d=edit?D.filter(function(x){return x.id==edit})[0]:null;editId=d?d.id:null;formType=d?d.type:type;
+ function t(){return'<button type="button" class="type'+(formType=="hilang"?" on":"")+'" data-t="hilang"><b>Barang hilang <i>Dipilih</i></b><small>Saya sedang mencari barang saya.</small></button><button type="button" class="type'+(formType=="temuan"?" on":"")+'" data-t="temuan"><b>Barang temuan <i>Dipilih</i></b><small>Saya menemukan barang seseorang.</small></button>'}
+ function f(k,l,ph,v,ty){return'<div class="fld"><label>'+l+'</label><input id="f_'+k+'" type="'+(ty||"text")+'" placeholder="'+ph+'" value="'+esc(v||"")+'"><div class="err">Wajib diisi</div></div>'}
+ V.innerHTML='<a class="back" href="#semua">← &nbsp;Kembali ke semua laporan</a><div class="top"><div><h1>'+(d?"Edit laporan":"Buat laporan baru")+'</h1><p class="sub">Lengkapi informasi berikut untuk membantu barang kembali ke pemiliknya.</p></div><small style="color:var(--mut);align-self:flex-end">Semua kolom wajib diisi</small></div>'+
+ '<div class="cols"><div class="card"><h2>Informasi barang</h2><small style="color:var(--mut)">Ceritakan barang yang hilang atau kamu temukan.</small><div class="fld" style="margin-top:14px"><label>Jenis laporan</label><div class="types" id="ty">'+t()+'</div></div>'+
+ f("name","Nama barang","Contoh: Dompet kulit cokelat",d&&d.name)+
+ '<div class="two"><div class="fld"><label>Kategori</label><select id="f_cat"><option value="">Pilih kategori barang</option>'+CATS.map(function(c){return'<option'+(d&&d.cat==c?" selected":"")+'>'+esc(c)+'</option>'}).join("")+'</select><div class="err">Wajib dipilih</div></div>'+f("date","Tanggal kehilangan / penemuan","",d&&d.date,"date")+'</div>'+
+ '<div class="fld"><label>Deskripsi barang</label><textarea id="f_desc" rows="4" placeholder="Tuliskan warna, merek, ciri khusus, dan kronologi singkat.">'+esc(d?d.desc:"")+'</textarea><div class="err">Wajib diisi</div></div>'+
+ f("loc","Lokasi kehilangan / penemuan","Contoh: Perpustakaan pusat, lantai 2",d&&d.loc)+
+ '<hr style="margin:24px 0 0"><h2 style="margin-top:20px;font-size:17px">Informasi pelapor</h2><div class="two">'+f("by","Nama pelapor","Masukkan nama lengkap",d&&d.by)+f("contact","Kontak","Nomor telepon atau email aktif",d&&d.contact)+'</div>'+
+ '<div class="actions"><small>Periksa kembali informasi sebelum mengirim.</small><div><button class="btn" id="bt" style="padding:12px 26px">Batal</button><button class="btn p" id="kr" style="padding:12px 26px">'+(d?"Simpan perubahan":"Kirim laporan")+'</button></div></div></div>'+
+ '<div><div class="card tips"><h2 style="font-size:19px;line-height:1.35">Laporan yang jelas,<br><span class="grn">peluang kembali lebih besar.</span></h2><div><i>01</i><span><b>Gunakan nama yang spesifik</b><small>Sertakan jenis, merek, atau warna barang.</small></span></div><div><i>02</i><span><b>Tambahkan ciri pembeda</b><small>Detail kecil membantu proses pencocokan.</small></span></div><div><i>03</i><span><b>Pastikan lokasi dan tanggal tepat</b><small>Informasi ini memudahkan penelusuran.</small></span></div></div>'+
+ '<div class="card mint" style="margin-top:20px"><h2>Privasi tetap terjaga</h2><p>Kontak digunakan untuk menghubungi pelapor terkait barang, bukan untuk ditampilkan pada daftar umum.</p><p style="margin-top:16px">Hindari mencantumkan PIN, kata sandi, atau nomor identitas lengkap pada deskripsi.</p></div></div></div>';
+ document.querySelectorAll("#ty .type").forEach(function(b){b.onclick=function(){formType=b.dataset.t;document.getElementById("ty").innerHTML=t();pageFormBind()}});
+ function pageFormBind(){document.querySelectorAll("#ty .type").forEach(function(b){b.onclick=function(){formType=b.dataset.t;document.getElementById("ty").innerHTML=t();pageFormBind()}})}
+ document.getElementById("bt").onclick=function(){location.hash=d?"detail-"+d.id:"semua"};
+ document.getElementById("kr").onclick=function(){
+  var ids=["name","cat","date","desc","loc","by","contact"],ok=true,v={};
+  ids.forEach(function(k){var e=document.getElementById("f_"+k);v[k]=e.value.trim();var bad=!v[k];e.classList.toggle("bad",bad);if(bad)ok=false});
+  if(!ok){toast("Lengkapi semua kolom");return}
+  if(d){d.name=v.name;d.cat=v.cat;d.date=v.date;d.desc=v.desc;d.loc=v.loc;d.by=v.by;d.contact=v.contact;d.type=formType;d.hist.push({t:"Laporan diperbarui",d:new Date().toISOString().slice(0,10)});toast("Perubahan disimpan");location.hash="detail-"+d.id}
+  else{var n=Math.max.apply(null,D.map(function(x){return x.id}))+1;D.push({id:n,name:v.name,cat:v.cat,type:formType,loc:v.loc,date:v.date,status:0,by:v.by,contact:v.contact,desc:v.desc,hist:[{t:"Laporan dibuat",d:v.date}]});toast("Laporan terkirim");location.hash="detail-"+n}
+ };
+}
+
+function pageCat(){
+ V.innerHTML='<div class="top"><div><h1>Kategori barang</h1><p class="sub">Telusuri laporan berdasarkan jenis barang.</p></div></div><div class="stats" style="grid-template-columns:repeat(3,1fr)">'+CATS.map(function(c){var n=D.filter(function(d){return d.cat==c}).length;return'<button class="card cat" data-c="'+esc(c)+'"><span>'+esc(c)+'</span><strong>'+n+'</strong><span class="grn" style="font-size:13px;font-weight:600">Lihat laporan →</span></button>'}).join("")+'</div>';
+ V.querySelectorAll(".cat").forEach(function(b){b.onclick=function(){flt={q:"",cat:b.dataset.c,st:"",tab:"all",page:1};location.hash="semua"}});
+}
+
+function pageGuide(){
+ var steps=[["Pilih jenis laporan","Pilih Barang hilang jika kamu kehilangan barang, atau Barang temuan jika kamu menemukan barang milik orang lain."],["Lengkapi detail barang","Isi nama, kategori, deskripsi, lokasi, dan tanggal. Sebutkan warna, merek, atau ciri khusus agar barang lebih mudah dicocokkan."],["Tambahkan kontak pelapor","Gunakan nama dan nomor telepon atau email yang aktif. Jangan menaruh informasi sensitif di deskripsi barang."],["Kirim dan pantau laporan","Periksa informasi, lalu tekan Kirim laporan. Buka detail untuk melihat status dan memperbaruinya saat penanganan berlangsung."]];
+ var faq=[["Bagaimana memilih kategori barang?","Pilih kategori yang paling sesuai. Gunakan Lainnya jika barang tidak termasuk dalam kategori yang tersedia."],["Informasinya salah, apakah bisa diubah?","Bisa. Buka detail laporan lalu tekan Edit laporan untuk memperbarui informasi."],["Apa yang dilakukan jika barang sudah kembali?","Buka detail laporan dan ubah status menjadi Selesai agar laporan tidak dicari lagi."]];
+ V.innerHTML='<div class="top" style="margin-bottom:20px"><div><h1>Panduan pelaporan</h1><p class="sub">Langkah sederhana untuk melapor dengan jelas, aman, dan mudah ditindaklanjuti.</p></div></div><div class="banner big" style="padding:24px 26px"><div><b style="font-size:21px;font-weight:600;margin-bottom:6px">Satu laporan bisa membuat perbedaan.</b><span>Kehilangan atau menemukan barang? Mulai dengan informasi yang tepat.<br>Ikuti empat langkah di bawah ini untuk membuat laporanmu.</span></div><a class="btn p" href="#tambah" style="padding:12px 28px">+ &nbsp;Buat laporan</a></div>'+
+ '<div class="cols"><div><div class="card"><h2>Cara membuat laporan</h2><small style="color:var(--mut)">Siapkan informasi barang dan kontak yang bisa dihubungi.</small><div style="margin-top:10px">'+steps.map(function(s,i){return'<div class="step"><i>0'+(i+1)+'</i><div><b>'+s[0]+'</b><p>'+s[1]+'</p></div></div>'}).join("")+'</div></div><div class="card"><h2>Pertanyaan umum</h2><div style="margin-top:8px">'+faq.map(function(q,i){return'<div class="faq'+(i==0?" open":"")+'"><button>'+q[0]+'<span>'+(i==0?"−":"+")+'</span></button><p>'+q[1]+'</p></div>'}).join("")+'</div></div></div>'+
+ '<div><div class="card"><h2>Utamakan keamanan</h2><div class="tip"><b>Jaga informasi pribadi</b><p>Jangan bagikan PIN, kata sandi, atau nomor identitas lengkap.</p></div><div class="tip"><b>Cocokkan ciri khusus</b><p>Minta penjelasan ciri barang sebelum menyerahkannya.</p></div><div class="tip"><b>Pilih tempat yang aman</b><p>Lakukan serah terima di area publik atau melalui petugas setempat.</p></div></div>'+
+ '<div class="card" style="margin-top:20px"><h2>Kenali status laporan</h2>'+["Laporan tercatat, tetapi belum ditindaklanjuti.","Pencarian, pencocokan, atau konfirmasi sedang berlangsung.","Barang sudah kembali dan penanganan laporan selesai."].map(function(t,i){return'<div style="margin-top:18px">'+badge(i)+'<p style="margin:8px 0 0;color:var(--mut);font-size:13px">'+t+'</p></div>'}).join("")+'</div></div></div><div class="foot"><span>Laporkan dengan jujur. Informasi yang akurat membantu proses pengembalian barang.</span></div>';
+ V.querySelectorAll(".faq button").forEach(function(b){b.onclick=function(){var f=b.parentNode,o=f.classList.toggle("open");b.lastChild.textContent=o?"−":"+"}});
+}
+
+var NAV1=[["semua","Semua laporan"],["hilang","Barang hilang"],["temuan","Barang temuan"],["kategori","Kategori barang"]];
+function route(){
+ var h=location.hash.slice(1)||"semua",base=h.split("-")[0],on=h;
+ var crumbs={semua:"Semua laporan",hilang:"Barang hilang",temuan:"Barang temuan",kategori:"Kategori barang",panduan:"Panduan pelaporan",tambah:"Tambah laporan",detail:"Detail laporan",edit:"Edit laporan"};
+ if(!crumbs[base]){h="semua";base="semua"}
+ if(flt.route!=base&&base!="tambah"&&base!="edit"){if(base!="semua"||flt.route=="")flt.q=flt.q}
+ if(flt.route!=base){var keep=(base=="semua"&&flt.cat&&flt.route=="kategori");if(!keep){flt.q="";flt.cat="";flt.st=""}flt.page=1;if(base!="semua")flt.tab="all"}
+ flt.route=base;
+ var cur=base=="detail"||base=="tambah"||base=="edit"?"semua":base;
+ document.getElementById("nav1").innerHTML=NAV1.map(function(n){return'<a href="#'+n[0]+'" class="'+(n[0]==cur?"on":"")+'">'+n[1]+(n[0]=="semua"?'<span class="cnt">'+D.length+"</span>":"")+"</a>"}).join("");
+ document.getElementById("nav2").innerHTML='<a href="#panduan" class="'+(cur=="panduan"?"on":"")+'">Panduan pelaporan</a>';
+ document.getElementById("crumb").innerHTML='Ruang kerja<i>/</i><b>'+crumbs[base]+"</b>";
+ document.title=crumbs[base]+" – TemuKembali";
+ window.scrollTo(0,0);
+ if(base=="semua")pageAll();
+ else if(base=="hilang"||base=="temuan")pageType(base);
+ else if(base=="kategori")pageCat();
+ else if(base=="panduan")pageGuide();
+ else if(base=="detail")pageDetail(h.split("-")[1]);
+ else if(base=="edit")pageForm("hilang",h.split("-")[1]);
+ else if(base=="tambah")pageForm(h=="tambah-temuan"?"temuan":"hilang");
+}
+window.addEventListener("hashchange",route);
+route();
+</script>
+</body>
+</html>
